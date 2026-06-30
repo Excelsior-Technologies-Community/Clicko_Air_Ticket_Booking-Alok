@@ -1,0 +1,241 @@
+.footer-backg {
+    background-image: url('https://clicko-html.vercel.app/assets/image/footer/footer-bg.png');
+    background-color: #212332;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 3;
+    padding-bottom: 110px;
+    padding-top: 110px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.footer-widget p {
+    color: #fff;
+    text-transform: capitalize;
+    padding-right: 48px;
+}
+
+.footer-widget .footer-call_support {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-call_support i {
+    height: 52px;
+    width: 52px;
+    font-size: 20px;
+    margin-right: 14px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #FC1C07;
+    color: #fff;
+}
+
+.footer-call_support span {
+    letter-spacing: 0.48px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 0 3px 0;
+    color: #fff;
+}
+
+.footer-call_support span a {
+    display: block;
+    font-size: 22px;
+}
+
+.footer-call_support span a:hover {
+    color: #FC1C07;
+}
+
+.social-style--footer {
+    display: inline-block;
+    padding-top: 25px;
+}
+
+.social-style--footer span {
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-right: 12px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.social-style--footer a {
+    background-color: rgba(255, 255, 255, 0.45);
+    display: inline-flex;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    margin-right: 7px;
+    transition: all ease 0.4s;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.social-style--footer a:hover {
+    background-color: #FC1C07;
+    color: #fff;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.ps-lg-0 {
+    padding-left: 0 !important;
+}
+
+.footer-widget .use-link {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin: 0 0 15px 0;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-menu li:hover {
+    transform: translateX(3px);
+}
+
+.footer-menu li a {
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-menu li:hover a i {
+    color: #FC1C07;
+}
+
+.footer-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.footer-gallery .gallery-thumb {
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-gallery .gallery-thumb:hover {
+    border-color: #FC1C07;
+}
+
+.footer-gallery .gallery-thumb:hover img{
+    opacity: 0.6;
+}
+
+.gallery-thumb img {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-bottom {
+    background-color: #25283E;
+    padding: 29px 0;
+}
+
+.footer-copyright {
+    color: #fff;
+    letter-spacing: 0.32px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.footer-copyright a {
+    color: #FC1C07;
+    position: relative;
+}
+
+.footer-copyright a::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    left: auto;
+    right: 0;
+    bottom: -2px;
+    opacity: 0;
+    visibility: hidden;
+    height: 2px;
+    background-color: #FC1C07;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-copyright a:hover::before {
+    left: 0;
+    right: auto;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-botm-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    column-gap: 40px;
+}
+
+.footer-botm-menu li a {
+    color: #E1E1E1;
+    letter-spacing: 0.32px;
+    position: relative;
+}
+
+.footer-botm-menu li a:hover {
+    color: #FC1C07;
+}
+
+.footer-botm-menu li a::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    left: auto;
+    right: 0;
+    bottom: -2px;
+    opacity: 0;
+    visibility: hidden;
+    height: 2px;
+    background-color: #FC1C07;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-botm-menu li a:hover::before {
+    left: 0;
+    right: auto;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
