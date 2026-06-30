@@ -323,6 +323,9 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            <div className="map-part">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d136862.4393009356!2d-74.27638714902837!3d40.712265765344185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b7a93b3db47%3A0xfb446e31ef0e660!2sNitehawk%20Cinema!5e0!3m2!1sen!2sbd!4v1768918430960!5m2!1sen!2sbd" frameborder="0"></iframe>
+            </div>
         </main>
     );
 };
