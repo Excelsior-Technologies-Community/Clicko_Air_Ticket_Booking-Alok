@@ -12,6 +12,16 @@
         contactData.message
         ];
         db.query(sql, values, callback);
+    },
+
+    getAll: (callback) => {
+        const sql = "SELECT * FROM contacts ORDER BY id DESC";
+        db.query(sql, callback);
+    },
+
+    delete: (id, callback) => {
+        const sql = "DELETE FROM contacts WHERE id = ?";
+        db.query(sql, [id], callback);
     }
     };
 

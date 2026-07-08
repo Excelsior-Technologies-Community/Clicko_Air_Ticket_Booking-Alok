@@ -69,7 +69,7 @@ const Header = () => {
                                             <Link>Home</Link>
                                         </li>
                                         <li className='main-menu-item'>
-                                            <Link>About us</Link>
+                                            <Link to="/about">About us</Link>
                                         </li>
                                         <li className='main-menu-item dropdown-item-has-children'>
                                             <Link to="#">Tickets</Link>
@@ -105,7 +105,7 @@ const Header = () => {
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link to="/booking">
+                                                            <Link to="/about">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 About Us
                                                             </Link>
@@ -223,7 +223,7 @@ const Header = () => {
                                         </div>
                                     </div>
                                     {/* offcanvas-left */}
-                                    <button class="btn-primary searchBoxTggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                    <button class="searchBoxTggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                                         <i className='fa-solid fa-magnifying-glass'></i>
                                     </button>
                                     <div class="offcanvas offcanvas-start popup-search-box" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">

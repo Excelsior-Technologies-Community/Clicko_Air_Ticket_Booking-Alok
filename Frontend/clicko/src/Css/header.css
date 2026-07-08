@@ -245,17 +245,6 @@ a {
     margin-right: 30px;
 }
 
-.country-select::before {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 25px;
-    background-color: #2D2737;
-    right: -18px;
-    top: 2px;
-    opacity: 0.4;
-}
-
 .country-select::after {
     content: "";
     position: absolute;
@@ -263,7 +252,8 @@ a {
     height: 40px;
     background-color: #2D2737;
     right: -22px;
-    top: -5px;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 0.4;
 }
 
@@ -299,7 +289,6 @@ a {
     top: 100% !important;
     left: 0 !important;
     right: 0 !important;
-    margin-top: 35px !important;
     background: #fff;
     border-bottom: 4px solid #FC1C07;
     padding: 10px 0;

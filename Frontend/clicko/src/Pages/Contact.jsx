@@ -68,9 +68,7 @@ const Contact = () => {
             });
             return;
         }
-
         setStatus({ loading: true, success: null, message: '' });
-
         try {
             const response = await submitContactForm(formData);
             if (response.data && response.data.success) {

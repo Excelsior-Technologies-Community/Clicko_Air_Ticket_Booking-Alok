@@ -48,7 +48,6 @@ connection.connect((err) => {
         }
       });
 
-      // Create company_info table
       const createCompanyInfoTableSql = `
         CREATE TABLE IF NOT EXISTS company_info (
           id INT AUTO_INCREMENT PRIMARY KEY,
@@ -69,7 +68,6 @@ connection.connect((err) => {
         }
         console.log("Company info table checked/created successfully");
 
-        // Seed default row if table is empty
         connection.query("SELECT COUNT(*) AS count FROM company_info", (err, rows) => {
           if (err) {
             console.error("Error checking company_info count:", err);
@@ -97,6 +95,112 @@ connection.connect((err) => {
               }
             });
           }
+        });
+
+        const createAboutInfoTableSql = `
+          CREATE TABLE IF NOT EXISTS about_info (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            subtitle VARCHAR(255) NOT NULL,
+            heading VARCHAR(255) NOT NULL,
+            description TEXT NOT NULL,
+            feature_title VARCHAR(255) NOT NULL,
+            feature_desc TEXT NOT NULL,
+            checklist1 VARCHAR(255) NOT NULL,
+            checklist2 VARCHAR(255) NOT NULL,
+            image1 VARCHAR(255),
+            image2 VARCHAR(255),
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+          )
+        `;
+        connection.query(createAboutInfoTableSql, (err) => {
+          if (err) {
+            console.error("Error creating about_info table:", err);
+            return;
+          }
+          console.log("About info table checked/created successfully");
+
+          connection.query("SELECT COUNT(*) AS count FROM about_info", (err, rows) => {
+            if (err) {
+              console.error("Error checking about_info count:", err);
+              return;
+            }
+            if (rows[0].count === 0) {
+              const seedAboutSql = `
+                INSERT INTO about_info (subtitle, heading, description, feature_title, feature_desc, checklist1, checklist2, image1, image2)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+              `;
+              const seedAboutValues = [
+                "Know About Flight",
+                "Experience The Luxury Private Jet",
+                "Choosing the right private jet is essential for a comfortable, efficient that and travel experience. Whether you're flying for business.",
+                "Easy & Quick Booking",
+                "right private jet is essential for a comfortable, efficient that and travel experience.",
+                "Private Jet Is Essential For A Comfortable",
+                "Essential For A Comfortable",
+                "https://clicko-html.vercel.app/assets/image/about/about-img-h2.jpg",
+                "https://clicko-html.vercel.app/assets/image/about/about-img2-h2.jpg"
+              ];
+              connection.query(seedAboutSql, seedAboutValues, (err) => {
+                if (err) {
+                  console.error("Error seeding about_info:", err);
+                } else {
+                  console.log("About info seeded successfully");
+                }
+              });
+            }
+          });
+
+          // Create best_deal table
+          const createBestDealTableSql = `
+            CREATE TABLE IF NOT EXISTS best_deal (
+              id INT AUTO_INCREMENT PRIMARY KEY,
+              subtitle VARCHAR(255) NOT NULL,
+              heading VARCHAR(255) NOT NULL,
+              metric1_val VARCHAR(50) NOT NULL,
+              metric1_lbl VARCHAR(255) NOT NULL,
+              metric2_val VARCHAR(50) NOT NULL,
+              metric2_lbl VARCHAR(255) NOT NULL,
+              video_url VARCHAR(255) NOT NULL,
+              updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+            )
+          `;
+          connection.query(createBestDealTableSql, (err) => {
+            if (err) {
+              console.error("Error creating best_deal table:", err);
+              return;
+            }
+            console.log("Best deal table checked/created successfully");
+
+            // Seed default best_deal row if empty
+            connection.query("SELECT COUNT(*) AS count FROM best_deal", (err, rows) => {
+              if (err) {
+                console.error("Error checking best_deal count:", err);
+                return;
+              }
+              if (rows[0].count === 0) {
+                const seedBestDealSql = `
+                  INSERT INTO best_deal (subtitle, heading, metric1_val, metric1_lbl, metric2_val, metric2_lbl, video_url)
+                  VALUES (?, ?, ?, ?, ?, ?, ?)
+                `;
+                const seedBestDealValues = [
+                  "Best Deals Offer",
+                  "Experience The Luxury Private Jet",
+                  "35000", // metric1_val (corresponds to 35K+)
+                  "Happy Customers",
+                  "100", // metric2_val (corresponds to 100%)
+                  "Client Satisfied",
+                  "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                ];
+                connection.query(seedBestDealSql, seedBestDealValues, (err) => {
+                  if (err) {
+                    console.error("Error seeding best_deal:", err);
+                  } else {
+                    console.log("Best deal seeded successfully");
+                  }
+                });
+              }
+            });
+          });
         });
       });
     });

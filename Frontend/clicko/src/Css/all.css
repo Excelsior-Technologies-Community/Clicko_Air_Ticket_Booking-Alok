@@ -231,3 +231,133 @@
     width: 100%;
     height: 100%;
 }
+
+/* ======================= About-us-page ======================= */
+
+.about-section {
+    padding-bottom: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://clicko-html.vercel.app/assets/image/bg/faq-bg-h1.png');
+}
+
+.tn-faq__ele {
+    position: absolute;
+    top: 150px;
+    left: 70px;
+    z-index: 0;
+}
+
+.tn-faq__ele .tn-xx-anim {
+    animation-name: tn-xx-anim;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes tn-xx-anim {
+    49% {
+        transform: translatex(100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translatex(-100%);
+    }
+
+    51% {
+        opacity: 1;
+    }
+}
+
+.tn-about2__media {
+    position: relative;
+}
+
+.tn-about2__media img {
+    width: 90%;
+    margin-right: 100px;
+    border-radius: 15px;
+}
+
+.tn-about2__media .about-img2 {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    margin: 0;
+    border: 15px solid #fff;
+    width: auto;
+}
+
+.feature-icon-wrapper .tn-about2__icon {
+    margin-right: 20px;
+}
+
+.feature-icon-wrapper .tn-about2__icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    background-color: rgba(45, 39, 55, 0.12);
+    border-radius: 50%;
+    color: #FC1C07;
+    font-size: 45px;
+}
+
+.feature-content {
+    padding-right: 48px;
+}
+
+.feature-content h3 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.feature-content p {
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.about-checklist li {
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.about-checklist li img {
+    margin-right: 6px;
+}
+
+.about-phone-icon {
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 0.6fr 1.9fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.about-phone-icon i{
+    width: 55px;
+    height: 55px;
+    line-height: 58px;
+    color: #FC1C07;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 1px solid rgba(45, 39, 55, 0.2);
+    text-align: center;
+    margin-top: 4px;
+}
+
+.about-phone-icon h4 {
+    font-size: 20px;
+}
+
+.about-phone-icon span{
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #4c4c4c;
+    text-transform: capitalize;
+
+}
