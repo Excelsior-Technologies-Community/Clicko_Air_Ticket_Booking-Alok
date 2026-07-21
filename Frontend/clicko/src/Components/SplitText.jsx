@@ -146,7 +146,6 @@ const SplitText = ({
   const renderTag = () => {
     const combinedStyle = {
       textAlign,
-      overflow: 'hidden',
       display: 'inline-block',
       whiteSpace: 'normal',
       wordWrap: 'break-word',

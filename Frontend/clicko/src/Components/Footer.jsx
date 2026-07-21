@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import AnimatedLink from './AnimatedLink'
 import '../Css/footer.css'
 
 const Footer = () => {
@@ -11,9 +12,9 @@ const Footer = () => {
                         <div className="col-lg-4">
                             <div className="footer-widget">
                                 <div className="footer-logo mb-20">
-                                    <Link>
+                                    <AnimatedLink to="/">
                                         <img src="https://clicko-html.vercel.app/assets/image/logo2.svg" alt="" />
-                                    </Link>
+                                    </AnimatedLink>
                                 </div>
                                 <p className='pe-lg-5'>There are many variations of passag Lorem available, but the majority.</p>
                                 <div className="footer-call_support">
@@ -44,25 +45,25 @@ const Footer = () => {
                                 </h2>
                                 <ul className='footer-menu'>
                                     <li>
-                                        <a href="">
+                                        <AnimatedLink to="/about">
                                             <i className='fa-solid fa-angles-right'></i>
                                             Company Profile
-                                        </a>
+                                        </AnimatedLink>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <AnimatedLink to="/contact">
                                             <i className='fa-solid fa-angles-right'></i>
                                             Help Center
-                                        </a>
+                                        </AnimatedLink>
                                     </li>
                                     <li>
-                                        <Link to="/contact">
+                                        <AnimatedLink to="/contact">
                                             <i className='fa-solid fa-angles-right'></i>
                                             Contact us
-                                        </Link>
+                                        </AnimatedLink>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="/about">
                                             <i className='fa-solid fa-angles-right'></i>
                                             Social Marketing
                                         </a>

@@ -8,6 +8,10 @@ const contactRoutes = require("./Routes/contact_routes");
 const companyInfoRoutes = require("./Routes/company_info_routes");
 const aboutInfoRoutes = require("./Routes/about_info_routes");
 const bestDealRoutes = require("./Routes/best_deal_routes");
+const faqRoutes = require("./Routes/faq_routes");
+const servicesRoutes = require("./Routes/services_routes");
+const bookingRoadmapRoutes = require("./Routes/booking_roadmap_routes");
+const serviceDetailRoutes = require("./Routes/service_detail_routes");
 const errorHandler = require("./Middleware/errorMiddleware");
 
 const app = express();
@@ -21,6 +25,10 @@ app.use("/api", contactRoutes);
 app.use("/api", companyInfoRoutes);
 app.use("/api", aboutInfoRoutes);
 app.use("/api", bestDealRoutes);
+app.use("/api", faqRoutes);
+app.use("/api", servicesRoutes);
+app.use("/api", bookingRoadmapRoutes);
+app.use("/api", serviceDetailRoutes);
 
 app.get("/", (req, res) => {
   res.send("Node + MySQL Backend Running");

@@ -1,6 +1,7 @@
 import React from 'react'
 import "../Css/header.css"
 import { Link } from 'react-router-dom'
+import AnimatedLink from './AnimatedLink'
 
 const Header = () => {
     return (
@@ -23,29 +24,14 @@ const Header = () => {
                             </div>
                             <div className="col-lg-auto">
                                 <div className='tn-header__right-txt d-flex align-items-center flex-wrap gap-4'>
-                                    <div className='d-flex align-items-center flex-wrap gap-3'>
-                                        <div className='tn-header__info-right'>
-                                            <i className='fa-solid fa-comments'></i>
-                                            <a href="">Feedback</a>
+                                    <div className='d-flex align-items-center gap-3 justify-content-center'>
+                                        <span>FOLLOW US ON :</span>
+                                        <div className='d-flex align-items-center gap-2 tn-header-social'>
+                                            <a href=""><i className='fab fa-facebook-f'></i></a>
+                                            <a href=""><i className='fa-brands fa-x-twitter'></i></a>
+                                            <a href=""><i className='fab fa-instagram'></i></a>
+                                            <a href=""><i className='fab fa-behance'></i></a>
                                         </div>
-                                        <div className='tn-header__info-right'>
-                                            <i className='fa-solid fa-gear'></i>
-                                            <a href="">support</a>
-                                        </div>
-                                    </div>
-                                    <div className="social-style">
-                                        <a href="">
-                                            <i className='fab fa-facebook-f'></i>
-                                        </a>
-                                        <a href="">
-                                            <i className='fab fa-linkedin-in'></i>
-                                        </a>
-                                        <a href="">
-                                            <i className='fab fa-instagram'></i>
-                                        </a>
-                                        <a href="">
-                                            <i className='fab fa-youtube'></i>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -57,32 +43,32 @@ const Header = () => {
                         <div className='row justify-content-between align-items-center'>
                             <div className="col">
                                 <div className="header-logo">
-                                    <Link>
+                                    <AnimatedLink to="/">
                                         <img src="https://clicko-html.vercel.app/assets/image/logo.svg" alt="" />
-                                    </Link>
+                                    </AnimatedLink>
                                 </div>
                             </div>
                             <div className="col-auto">
                                 <nav className='main-menu d-lg-block'>
                                     <ul>
                                         <li className='main-menu-item'>
-                                            <Link>Home</Link>
+                                            <AnimatedLink to="/">Home</AnimatedLink>
                                         </li>
                                         <li className='main-menu-item'>
-                                            <Link to="/about">About us</Link>
+                                            <AnimatedLink to="/about">About us</AnimatedLink>
                                         </li>
                                         <li className='main-menu-item dropdown-item-has-children'>
                                             <Link to="#">Tickets</Link>
                                             <ul className="dropdown-menu-list">
                                                 <li>
-                                                    <Link to="/booking">
+                                                    <AnimatedLink to="/booking">
                                                         <i className="fa-solid fa-angles-right"></i> Booking
-                                                    </Link>
+                                                    </AnimatedLink>
                                                 </li>
                                                 <li>
-                                                    <Link to="/booking-details">
+                                                    <AnimatedLink to="/booking-details">
                                                         <i className="fa-solid fa-angles-right"></i> Booking Details
-                                                    </Link>
+                                                    </AnimatedLink>
                                                 </li>
                                             </ul>
                                         </li>
@@ -93,34 +79,34 @@ const Header = () => {
                                                     <div className='pages-drop'>PAGE LIST 1</div>
                                                     <ul>
                                                         <li>
-                                                            <Link to="/booking">
+                                                            <AnimatedLink to="/booking">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 Home 01
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                         <li>
-                                                            <Link to="/booking">
+                                                            <AnimatedLink to="/booking">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 Home 02
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                         <li>
-                                                            <Link to="/about">
+                                                            <AnimatedLink to="/about">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 About Us
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                         <li>
-                                                            <Link to="/booking">
+                                                            <AnimatedLink to="/service">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 Service
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                         <li>
-                                                            <Link to="/booking">
+                                                            <AnimatedLink to="/servicedetail">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 Service Details
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -128,28 +114,28 @@ const Header = () => {
                                                     <div className='pages-drop'>PAGE LIST 2</div>
                                                     <ul>
                                                         <li>
-                                                            <Link to="/booking">
+                                                            <AnimatedLink to="/booking">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 Booking
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                         <li>
-                                                            <Link to="/booking">
+                                                            <AnimatedLink to="/booking">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 Booking Details
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                         <li>
-                                                            <Link to="/booking">
+                                                            <AnimatedLink to="/booking">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 Blog
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                         <li>
-                                                            <Link to="/booking">
+                                                            <AnimatedLink to="/booking">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 Blog Details
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -157,16 +143,16 @@ const Header = () => {
                                                     <div className='pages-drop'>PAGE LIST 3</div>
                                                     <ul>
                                                         <li>
-                                                            <Link to="/contact">
+                                                            <AnimatedLink to="/contact">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 Contact Us
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                         <li>
-                                                            <Link to="/error">
+                                                            <AnimatedLink to="/error">
                                                                 <i className="fa-solid fa-angles-right"></i>
                                                                 404 Page
-                                                            </Link>
+                                                            </AnimatedLink>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -176,19 +162,19 @@ const Header = () => {
                                             <Link>Blog</Link>
                                             <ul className="dropdown-menu-list">
                                                 <li>
-                                                    <Link to="/booking">
+                                                    <AnimatedLink to="/booking">
                                                         <i className="fa-solid fa-angles-right"></i> Blog
-                                                    </Link>
+                                                    </AnimatedLink>
                                                 </li>
                                                 <li>
-                                                    <Link to="/booking-details">
+                                                    <AnimatedLink to="/booking-details">
                                                         <i className="fa-solid fa-angles-right"></i> Blog Details
-                                                    </Link>
+                                                    </AnimatedLink>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className='main-menu-item'>
-                                            <Link to='/contact'>Contact</Link>
+                                            <AnimatedLink to='/contact'>Contact</AnimatedLink>
                                         </li>
                                     </ul>
                                 </nav>

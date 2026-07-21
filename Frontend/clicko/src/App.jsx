@@ -3,9 +3,12 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Error from './Pages/Error'
+import Service from './Pages/Service'
 import Contact from './Pages/Contact'
 import About from './Pages/About'
+import ServiceDetail from './Pages/ServiceDetail'
 import AdminPanel from './Admin/AdminPanel'
+import { PageTransitionProvider } from './Components/PageTransition'
 import './App.css'
 
 function AppContent() {
@@ -19,6 +22,9 @@ function AppContent() {
         <Route path="error" element={<Error />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
+        <Route path="service" element={<Service />} />
+        <Route path="servicedetail" element={<ServiceDetail />} />
+
         <Route path="admin" element={<AdminPanel />} />
       </Routes>
       {!isAdmin && <Footer />}
@@ -29,9 +35,12 @@ function AppContent() {
 function App() {
   return (
     <Router>
-      <AppContent />
+      <PageTransitionProvider>
+        <AppContent />
+      </PageTransitionProvider>
     </Router>
   )
 }
 
 export default App
+

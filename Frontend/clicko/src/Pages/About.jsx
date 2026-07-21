@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { getAboutInfo } from '../api/authApi';
 import SplitText from '../Components/SplitText';
 import BestDeal from '../Components/BestDeal';
+import FaqQuestion from '../Components/FaqQuestion';
 import '../Css/all.css';
 
 const About = () => {
@@ -143,6 +144,7 @@ const About = () => {
                 </div>
             </section>
             <BestDeal />
+            <FaqQuestion />
         </main>
     );
 };

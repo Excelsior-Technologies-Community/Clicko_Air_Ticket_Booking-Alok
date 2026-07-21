@@ -1,0 +1,120 @@
+.preloader-overlay {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99999;
+}
+
+.preloader-overlay img {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-40%, -50%);
+  text-align: center;
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.radar-loader-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-top: 60px;
+}
+
+.radar-loader-container span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+.radar-loader-container span::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(5px);
+  transform: scale(0);
+  animation: load 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes load {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  10% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.airplane-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  animation: rotate 2s linear infinite;
+  animation-delay: -1.5s;
+}
+
+.airplane-icon {
+  position: absolute;
+  top: -15px;
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  fill: #FC1C07;
+  transform-origin: center 95px;
+}
+
+.airplane-container .icon {
+  font-size: 50px;
+  color: #FC1C07;
+  position: absolute;
+  top: -10px;
+  left: 80px;
+  transform: rotate(45deg);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

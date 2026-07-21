@@ -301,6 +301,16 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
+.cTxtbtn::before,
+.cTxtbtn::after {
+  color: #2D2737;
+  background-color: #ffffff;
+}
+
+.cTxtbtn:hover {
+  color: #2D2737;
+}
+
 .video-responsive {
   position: relative;
   padding-bottom: 56.25%;
